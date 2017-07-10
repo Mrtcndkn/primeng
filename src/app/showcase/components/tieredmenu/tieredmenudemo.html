@@ -39,7 +39,7 @@ import &#123;TieredMenuModule,MenuItem&#125; from 'primeng/primeng';
 <code class="language-typescript" pCode ngNonBindable>
 export class TieredMenuDemo &#123;
 
-    private items: MenuItem[];
+    items: MenuItem[];
 
     ngOnInit() &#123;
         this.items = [
@@ -104,6 +104,13 @@ export class TieredMenuDemo &#123;
                             <td>boolean</td>
                             <td>false</td>
                             <td>Defines if menu would displayed as a popup.</td>
+                        </tr>
+                        <tr>
+                            <td>appendTo</td>
+                            <td>any</td>
+                            <td>null</td>
+                            <td>Target element to attach the overlay, valid values are "body" or a local ng-template variable
+                                of another element.</td>
                         </tr>
                         <tr>
                             <td>style</td>
@@ -214,7 +221,7 @@ export class TieredMenuDemo &#123;
 <code class="language-typescript" pCode ngNonBindable>
 export class TieredMenuDemo &#123;
 
-    private items: MenuItem[];
+    items: MenuItem[];
 
     ngOnInit() &#123;
         this.items = [
