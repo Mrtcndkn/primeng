@@ -113,6 +113,9 @@ export class ConfirmDialog implements AfterViewInit,AfterViewChecked,OnDestroy {
                 this.rejectVisible = this.confirmation.rejectVisible == null ? this.rejectVisible : this.confirmation.rejectVisible;
                 this.acceptVisible = this.confirmation.acceptVisible == null ? this.acceptVisible : this.confirmation.acceptVisible;
                 
+                this.acceptLabel = this.confirmation.acceptLable == null ? this.acceptLabel: this.confirmation.acceptLable;
+                this.rejectLabel = this.confirmation.rejectLabel == null ? this.rejectLabel: this.confirmation.rejectLabel;
+                
                 if(this.confirmation.accept) {
                     this.confirmation.acceptEvent = new EventEmitter();
                     this.confirmation.acceptEvent.subscribe(this.confirmation.accept);
