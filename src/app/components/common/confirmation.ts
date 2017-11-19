@@ -11,4 +11,7 @@ export interface Confirmation {
     rejectVisible?: boolean;
     acceptEvent?: EventEmitter<any>;
     rejectEvent?: EventEmitter<any>;
+  
+    acceptLabel?:string;
+    rejectLabel?:string;
 }
