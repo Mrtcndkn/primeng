@@ -39,4 +39,20 @@ export class ConfirmDialogDemo {
             }
         });
     }
+  
+    confirm3(){
+        this.confirmationService.confirm({
+            message: 'Do you want to operate this record??',
+            header: 'Operate Confirmation',
+            icon: 'fa-trash',
+            accept: () => {
+                this.msgs = [{severity:'info', summary:'Confirmed', detail:'You have accepted'}];
+            },
+            reject: () => {
+                this.msgs = [{severity:'info', summary:'Rejected', detail:'You have rejected'}];
+            },
+            acceptLable:'Ok',
+            rejectLabel:'Cancle'
+        });
+    }
 }
